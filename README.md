@@ -1,131 +1,161 @@
-# C Calculator Program Using Functions
+# C Library Management System
 
 ## Overview
 
-This repository contains a simple menu-driven calculator program written in C. It demonstrates the use of functions, switch-case statements, loops, and user input handling.
+This repository contains a menu-driven Library Management System developed in C using structures, arrays, loops, conditional statements, and functions.
 
-The program performs basic arithmetic operations such as addition, subtraction, multiplication, and division.
+The system allows users to manage book records by performing operations such as adding books, viewing books, searching books, issuing books, returning books, and deleting books.
 
 This project is useful for:
 
 - Beginners learning C programming
-- Understanding functions in C
-- Practicing switch-case logic
-- Menu-driven program design
-- Embedded systems learners
-- College laboratory exercises
+- College laboratory projects
+- Mini project demonstrations
+- Data management practice
+- Understanding structures and arrays
+- Logic-building exercises
 
 ---
 
 ## Features
 
-- Addition of two numbers
-- Subtraction of two numbers
-- Multiplication of two numbers
-- Division of two numbers
-- Menu-driven interface
-- Continuous execution until Exit is selected
+### Add Book
+
+Allows the user to add a new book record including:
+
+- Book ID
+- Book Title
+- Author Name
+- Quantity
+
+#### Example
+
+```text
+Enter Book ID: 101
+Enter Book Name: CProgramming
+Enter Author Name: Dennis
+Enter Quantity: 5
+
+Book Added Successfully!
+```
+
+---
+
+### View Books
+
+Displays all available books stored in the system.
+
+#### Example
+
+```text
+========== BOOK LIST ==========
+
+Book ID   : 101
+Book Name : CProgramming
+Author    : Dennis
+Quantity  : 5
+
+------------------------------
+```
+
+---
+
+### Search Book
+
+Searches a book using its Book ID.
+
+#### Example
+
+```text
+Enter Book ID to Search: 101
+
+===== BOOK FOUND =====
+
+Book ID   : 101
+Book Name : CProgramming
+Author    : Dennis
+Quantity  : 5
+```
+
+---
+
+### Issue Book
+
+Issues a book if copies are available.
+
+The quantity decreases by one after issuing.
+
+#### Example
+
+```text
+Enter Book ID to Issue: 101
+
+Book Issued Successfully.
+```
+
+If quantity becomes zero:
+
+```text
+Book Not Available.
+```
+
+---
+
+### Return Book
+
+Returns a book and increases the quantity by one.
+
+#### Example
+
+```text
+Enter Book ID to Return: 101
+
+Book Returned Successfully.
+```
+
+---
+
+### Delete Book
+
+Deletes a book record using Book ID.
+
+Includes confirmation before deletion.
+
+#### Example
+
+```text
+Enter Book ID to Delete: 101
+Confirm Delete (y/n): y
+
+Book Deleted Successfully.
+```
+
+---
+
+### Exit Program
+
+Safely terminates the application.
+
+#### Example
+
+```text
+Thank You! Exiting Program...
+```
 
 ---
 
 ## Concepts Used
 
-- Functions
-- Switch-Case Statement
-- Do-While Loop
-- User Input using `scanf()`
-- Return Values
-- Arithmetic Operations
-
----
-
-## Program Flow
-
-1. Display calculator menu.
-2. User selects an operation.
-3. User enters two numbers.
-4. Corresponding function is called.
-5. Result is displayed.
-6. Program continues until the user chooses Exit.
-
----
-
-## Functions Included
-
-### Addition
-
-Adds two numbers and returns the result.
-
-### Subtraction
-
-Subtracts the second number from the first number.
-
-### Multiplication
-
-Multiplies two numbers.
-
-### Division
-
-Divides the first number by the second number.
-
----
-
-## Sample Output
-
-```text
-===== Calculator =====
-
-1. Add
-2. Subtract
-3. Multiply
-4. Divide
-5. Exit
-
-enter the choice[1-5]: 1
-
-Enter first number: 10
-Enter second number: 5
-
-Result = 15
-```
-
----
-
-## How to Compile
-
-```bash
-gcc calculator.c -o calculator
-```
-
-## How to Run
-
-```bash
-./calculator
-```
-
----
-
-## Learning Outcomes
-
-After completing this project, you will understand:
-
-- Function-based programming
-- Menu-driven application development
-- Switch-case implementation
-- Loop control structures
-- Code modularization
-- Basic arithmetic operations in C
-
----
-
-## Future Improvements
-
-- Floating-point calculations
-- Modulus operation
-- Power calculation
-- Division-by-zero handling
-- Scientific calculator functions
-- Calculation history
+- Structures
+- Arrays of Structures
+- Menu Driven Programming
+- Loops
+- Conditional Statements
+- Searching Techniques
+- Record Deletion Logic
+- Data Management
+- User Interaction
+- Basic Inventory Management
 
 ---
 
@@ -134,7 +164,90 @@ After completing this project, you will understand:
 - C Programming Language
 - GCC Compiler
 - VS Code
-- Code::Blocks
+- CodeBlocks
+- Turbo C
+
+---
+
+## Project Structure
+
+```text
+library-management-system/
+│
+├── library_management.c
+└── README.md
+```
+
+---
+
+## How to Compile
+
+Compile:
+
+```bash
+gcc library_management.c -o library
+```
+
+Run:
+
+```bash
+./library
+```
+
+Windows:
+
+```bash
+library.exe
+```
+
+---
+
+## Sample Menu
+
+```text
+===== LIBRARY MANAGEMENT SYSTEM =====
+
+1. Add Book
+2. View Books
+3. Search Book
+4. Issue Book
+5. Return Book
+6. Delete Book
+7. Exit
+
+Enter choice:
+```
+
+---
+
+## Learning Outcomes
+
+After completing this project, you will understand:
+
+- Structure creation and usage
+- Arrays of structures
+- Record management techniques
+- Searching records
+- Deleting records from arrays
+- Inventory management logic
+- Menu-driven application development
+- Real-world C project implementation
+
+---
+
+## Future Improvements
+
+Possible future additions:
+
+- File Handling Support
+- Book Borrower Records
+- Fine Calculation System
+- Login Authentication
+- Admin and User Roles
+- Dynamic Memory Allocation
+- Date and Time Tracking
+- Persistent Database Storage
+- Book Category Management
 
 ---
 
@@ -145,6 +258,9 @@ After completing this project, you will understand:
 Learning:
 
 - C Programming
-- Embedded Systems
 - Data Structures
+- Embedded Systems
+- Python Development
+- IoT Systems
 - Problem Solving
+- Software Development
